@@ -1,0 +1,72 @@
+.app-shell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: url('https://images.unsplash.com/photo-1534088568595-a066f410bcda?auto=format&fit=crop&w=3840&q=80') no-repeat center center fixed;
+  background-size: cover;
+  color: #f1f5f9;
+  position: relative;
+}
+
+.app-shell::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.55);
+  backdrop-filter: blur(2px);
+  pointer-events: none;
+}
+
+.app-header,
+.app-main,
+.app-footer {
+  position: relative;
+  z-index: 1;
+}
+
+.app-header {
+  text-align: center;
+  padding: 2.5rem 1rem 1.5rem;
+}
+
+.app-header h1 {
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.app-subtitle {
+  margin-top: 0.4rem;
+  color: #cbd5e1;
+  font-size: 0.95rem;
+}
+
+.app-main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 1rem 1rem 3rem;
+}
+
+.app-footer {
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.8rem;
+  color: #94a3b8;
+}
+
+.app-footer a {
+  color: #7dd3fc;
+  text-decoration: none;
+}
+
+.app-footer a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 480px) {
+  .app-header {
+    padding: 1.75rem 1rem 1rem;
+  }
+}
